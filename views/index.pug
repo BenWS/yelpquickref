@@ -1,0 +1,25 @@
+html
+  head
+    style.
+      body {font-family:arial} p {font-size:15px}
+  body
+    h2(style='color:#003399') Venue Generator
+    form(action='/results', method='get')
+      input(type='textfield', name='location', placeholder='Zipcode or City, State')
+      br
+      p Choose Entertainment Category
+      select(name='category')
+        option(value='-') -
+        option(value='restaurants') Restaurants
+        option(value='nightlife') Nightlife
+        option(value='art_entertainment') Arts & Entertainment
+      br
+      p Choose Search Radius
+      select(name='radius')
+        option(value='') -
+        option(value='8000') 5 miles
+        option(value='16090') 10 miles
+        option(value='45000') 25 miles 
+      br
+      br
+      input(type='submit')

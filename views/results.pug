@@ -1,0 +1,46 @@
+-var name = results.name
+-var rating = results.rating
+-var reviewCount = results.reviewCount
+-var categories = results.categories
+-var image = results.image
+-var phone = results.phone
+-var address = results.address
+-var city = results.city
+-var yelp_url = results.yelp_url
+-var searchCategory = results.searchCategory
+-var searchLocation = results.searchLocation
+-var searchRadius = results.searchRadius
+
+html
+  head
+    style.
+      body {font-family:arial} p {font-size:15px}
+  body
+    h2(style='color:#003399') #{name}
+    img(src=image, height='300px')
+    p
+      | #{categories}
+      br
+      | Rating: #{rating} (#{reviewCount} reviews)
+      br
+      br
+      u Contact:
+      br
+      | #{address}
+      br
+      | #{city}
+      br
+      | #{phone}
+      br
+      br
+      | Click 
+      a(href=yelp_url) here 
+      |  for more information
+    u
+      u
+    p
+    form(action='/results')
+      input(type='hidden', name='location', value=searchLocation)
+      input(type='hidden', name='category', value=searchCategory)
+      input(type='hidden', name='radius', value=searchRadius)
+      input(type='submit', value='Give me another!')
