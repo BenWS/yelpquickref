@@ -168,6 +168,11 @@ app.get('/results', (request,response) => {
             var randomBusiness = 
                 Math.floor(
                     Math.random() * parseInt(seedValue));
+                    
+            if(randomBusiness == 0) {
+                //passing offset integer 0 to search method results in INVALID SIGNATURE error -- correcting here
+                randomBusiness = '0'
+            } 
             
             console.log('Random Number Selected: ' + randomBusiness);
             search_request({category_filter:selection, offset: randomBusiness, location:selectedLocation, radius_filter:radius}, (err, res, body) => {
@@ -239,6 +244,11 @@ app.get('/results', (request,response) => {
                         Math.floor(
                             Math.random() * parseInt(seedValue));
                     
+                     if(randomBusiness == 0) {
+                        //passing offset integer 0 to search method results in INVALID SIGNATURE error -- correcting here
+                        randomBusiness = '0'
+                     } 
+                    
                     console.log('Random Number Selected: ' + randomBusiness);
                     search_request({category_filter:userSelection, offset: randomBusiness, location:selectedLocation, radius_filter:radius}, (err, res, body) => {
                         var resultBody = JSON.parse(body);
@@ -308,6 +318,11 @@ app.get('/results', (request,response) => {
                             var randomBusiness = 
                                 Math.floor(
                                     Math.random() * parseInt(seedValue));
+                                    
+                            if(randomBusiness == 0) {
+                                //passing offset integer 0 to search method results in INVALID SIGNATURE error -- correcting here
+                                randomBusiness = '0'
+                            } 
                             
                             console.log('Random Number Selected: ' + randomBusiness);
                             search_request({category_filter:userSelection, offset: randomBusiness, location:selectedLocation}, (err, res, body) => {
