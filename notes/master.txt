@@ -1,3 +1,15 @@
+2-22-17
+
+- Provide indication to user when filters are removed - DONE?
+- category selection of 'arts_entertainment' seems to return questionable results - need to troubleshoot this. -- DONE?
+- Require user to complete all fields - DONE
+- provide catch for no locations found in search field - DONE
+
+2-13-17
+
+- Provide indication to user when filters are removed
+- category selection of 'arts_entertainment' seems to return questionable results - need to troubleshoot this.
+
 2-12-17
 
 - create 'No Results' page as catch for search #3

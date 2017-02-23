@@ -10,6 +10,7 @@
 -var searchCategory = results.searchCategory
 -var searchLocation = results.searchLocation
 -var searchRadius = results.searchRadius
+-var filterString = results.filterString
 
 html
   head
@@ -24,7 +25,7 @@ html
       | Rating: #{rating} (#{reviewCount} reviews)
       br
       br
-      u Contact:
+      u Address and Phone:
       br
       | #{address}
       br
@@ -34,13 +35,18 @@ html
       br
       br
       | Click 
-      a(href=yelp_url) here 
+      a(href=yelp_url) here
       |  for more information
-    u
-      u
+      br
+      | Click 
+      a(href='/index') here
+      |  to perform search with new location, category, or search radius
     p
     form(action='/results')
       input(type='hidden', name='location', value=searchLocation)
       input(type='hidden', name='category', value=searchCategory)
       input(type='hidden', name='radius', value=searchRadius)
       input(type='submit', value='Give me another!')
+    br
+    br
+    p #{filterString}
