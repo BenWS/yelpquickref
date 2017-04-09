@@ -1,0 +1,26 @@
+{
+  "name": "yelpquickref",
+  "version": "1.0.0",
+  "description": "Return single result from yelp for provided search input - to avoid overwhelming number of options",
+  "main": "server.js",
+  "scripts": {
+    "test": "node",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenWS/yelpquickref.git"
+  },
+  "author": "Ben Shippey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenWS/yelpquickref/issues"
+  },
+  "homepage": "https://github.com/BenWS/yelpquickref#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "multer": "^1.3.0",
+    "path": "^0.12.7",
+    "pug": "^0.1.0"
+  }
+}
